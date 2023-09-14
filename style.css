@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+/*NAVBAR*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(23, 26, 33);
+    color: white;
+}
+
+.page1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.page1 nav {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page1 nav img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+nav .other {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.search {
+    width: 250px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+    padding: 0px 15px;
+    background-color: transparent;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/*Carousel*/
+
+.movie-container {
+    margin: 20px auto;
+    height: 80%;
+    width: 95%;
+    background-color: aliceblue;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.movie-info {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+
+/*Genres list*/
+.movie-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    display: flex;
+    overflow-x: scroll;
+    margin: 0 20px;
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}
+
+.genre {
+    margin-left: 30px;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 5px 10px;
+    gap: 5px;
+    max-width: 200px;
+}
+
+.card img {
+    height: 300px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 0px 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.star-year {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.year {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2.5px 10px;
+    border-radius: 10px;
+}
