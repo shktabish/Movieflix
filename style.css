@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
 /*NAVBAR*/
 
 * {
@@ -11,6 +34,7 @@
 }
 
 body {
+    height: 100%;
     background-color: rgb(23, 26, 33);
     color: white;
 }
@@ -67,17 +91,45 @@ textarea:focus, input:focus{
     margin: 20px auto;
     height: 80%;
     width: 95%;
-    background-color: aliceblue;
     border-radius: 15px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    position: relative;
+    z-index: -1;
+    display: flex;
 }
 
 .movie-info {
+    position: relative;
     width: 50%;
     height: 100%;
-    background-color: black;
+    margin: auto 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.movie-title {
+    font-size: 30px;
+}
+
+.ratings {
+    display: flex;
+    gap: 30px;
+}
+
+.carousel-btn {
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #E50914;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
 }
 
 /*Genres list*/
@@ -94,23 +146,23 @@ textarea:focus, input:focus{
     margin: 0 20px;
 }
 
-.list::-webkit-scrollbar {
-    display: none;
-}
-
 .genre {
-    margin-left: 30px;
-    font-size: 30px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 10px 30px;
+    font-size: 35px;
+
 }
 
 .card {
     display: inline-flex;
     flex-direction: column;
-    margin: 5px 10px;
+    margin: 20px 10px;
     gap: 5px;
     max-width: 200px;
+    transition: scale 1s ease;
+}
+
+.card:hover {
+    scale: 1.1;
 }
 
 .card img {
@@ -136,4 +188,9 @@ textarea:focus, input:focus{
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2.5px 10px;
     border-radius: 10px;
+}
+
+a, a:active, a:visited, a:hover {
+    text-decoration: none;
+    color: #fff;
 }
